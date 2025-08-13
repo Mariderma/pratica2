@@ -1,0 +1,9 @@
+
+@use './variables';
+@use './personal';
+@use './teaser';
+@use './skills';
+
+body {
+  background-color: variables.$background-color;
+}

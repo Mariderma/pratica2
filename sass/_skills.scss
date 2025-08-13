@@ -1,0 +1,46 @@
+@use './variables.scss';
+
+.skills-section {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 32px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .skills-column {
+        background: variables.$background-color;
+        border-radius: 12px;
+        padding: 20px;
+        width: 100%;
+        max-width: 350px;
+    }
+
+    h3 {
+        color: variables.$primary-color;
+        font-size: 20px;
+        margin-bottom: 12px;
+        text-align: center;
+    }
+
+    ul {
+        list-style: disc inside;
+        color: variables.$text-color;
+        font-size: 16px;
+        padding-left: 0;
+        margin: 0;
+    }
+
+    li {
+        margin-bottom: 8px;
+    }
+
+    @media (max-width: 800px) {
+        flex-direction: column;
+        gap: 20px;
+        .skills-column {
+            max-width: 100%;
+        }
+    }
+}

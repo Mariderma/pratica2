@@ -1,0 +1,35 @@
+@use './variables.scss';
+
+.professional-profile {
+    border: 2px solid variables.$primary-color;
+    background: variables.$background-color;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 32px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+
+    h2 {
+        color: variables.$primary-color;
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+
+    p {
+        color: variables.$text-color;
+        font-size: 16px;
+        margin: 0;
+    }
+
+    @media (max-width: 700px) {
+        max-width: 100%;
+        padding: 12px;
+        h2 {
+            font-size: 20px;
+        }
+        p {
+            font-size: 15px;
+        }
+    }
+}
