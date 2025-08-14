@@ -5,17 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
     <link rel="stylesheet" href="css/styles.css">
-    <style>
-        .form-group { margin-bottom: 18px; }
-        .error { color: #d32f2f; font-size: 13px; margin-top: 4px; }
-        .valid { border: 2px solid #4caf50; }
-        .invalid { border: 2px solid #d32f2f; }
-        .success-message { color: #4caf50; font-weight: bold; margin-top: 16px; }
-        button:disabled { background: #ccc; cursor: not-allowed; }
-    </style>
 </head>
 <body>
-    <form id="signupForm" novalidate>
+    <div class="signup-form-center">
+        <form id="signupForm" class="signup-form" novalidate>
         <h2>Registro</h2>
         <div class="form-group">
             <label for="fullname">Nombre completo</label>
@@ -61,7 +54,8 @@
         </div>
         <button type="submit" id="submitBtn" disabled>Enviar</button>
         <div class="success-message" id="successMessage"></div>
-    </form>
+        </form>
+    </div>
     <script src="js/signup.js"></script>
 </body>
 </html>

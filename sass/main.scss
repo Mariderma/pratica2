@@ -3,6 +3,7 @@
 @use './personal';
 @use './teaser';
 @use './skills';
+@use './signup';
 
 body {
   background-color: variables.$background-color;
