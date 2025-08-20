@@ -101,6 +101,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     form.addEventListener('submit', function (e) {
         e.preventDefault();
+        const recaptchaResponse = grecaptcha.getResponse();
+        if (!recaptchaResponse) {
+            // Muestra error de reCAPTCHA
+            return;
+        }
         if (validateForm()) {
             successMessage.textContent = '¡Registro exitoso!';
             form.reset();
