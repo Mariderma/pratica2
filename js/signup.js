@@ -101,10 +101,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     form.addEventListener('submit', function (e) {
         e.preventDefault();
-        const recaptchaResponse = grecaptcha.getResponse();
-        if (!recaptchaResponse) {
-            // Muestra error de reCAPTCHA
-            return;
+        // Solo validar reCAPTCHA si existe el objeto y el widget
+        if (window.grecaptcha && document.querySelector('.g-recaptcha')) {
+            const recaptchaResponse = grecaptcha.getResponse();
+            if (!recaptchaResponse) {
+                alert('Por favor, verifica que no eres un robot.');
+                return;
+            }
         }
         if (validateForm()) {
             successMessage.textContent = '¡Registro exitoso!';
@@ -113,6 +116,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 field.input.classList.remove('valid', 'invalid');
             });
             submitBtn.disabled = true;
+            if (window.grecaptcha && document.querySelector('.g-recaptcha')) {
+                grecaptcha.reset();
+            }
         } else {
             successMessage.textContent = '';
         }
