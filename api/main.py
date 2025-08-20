@@ -7,7 +7,7 @@ def create_assessment(
     """Crea una evaluación para analizar el riesgo de una acción de la IU.
     Args:
         project_id: 	abiding-kingdom-469601-p9
-        recaptcha_key: 6LeG06srAAAAAGMSCanfKbNfnqW1tNry5HkzVGJ7
+        recaptcha_key: 6Lc6yqsrAAAAAM87mgLdDsVPDtuA6ExWUBuytcbt
         token: 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
         recaptcha_action: LOGIN
     """
